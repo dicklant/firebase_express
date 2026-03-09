@@ -1,0 +1,18 @@
+runConfig:
+  # Nombre de requêtes simultanées par instance
+  concurrency: 80
+  # Mémoire allouée (128Mi, 256Mi, 512Mi, 1Gi, 2Gi...)
+  memory: 512Mi
+  # CPU alloué
+  cpu: 1
+  # Nombre max d'instances (évite les surcoûts)
+  maxInstances: 3
+  # Nombre min d'instances (0 = cold start possible)
+  minInstances: 0
+
+env:
+  # Exemple de variable d'environnement
+  - variable: NODE_ENV
+    value: production
+    availability:
+      - RUNTIME
